@@ -1,5 +1,4 @@
 #!/bin/bash
-# Definiciones de colores
 greenColour="\e[0;32m\033[1m"
 endColour="\033[0m\e[0m"
 redColour="\e[0;31m\033[1m"
@@ -10,7 +9,6 @@ turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 lightBlueColour="\e[0;94m\033[1m"
 
-# Función para mostrar el menú inicial
 root() {
     if [ $EUID -ne 0 ]; then
         whiptail --title "PortCheckmate - hL18a" --msgbox "No tienes permisos de superusuario..." 8 50
@@ -105,12 +103,11 @@ save_file2() {
                 read archivo_guardar
 
                 nmap $ip -p- --open -T5 -v -n -O -oG $archivo_guardar
-                ip_and_ports_filtro2y3 # llamamos a la función ip_and_ports_filtro2y3
+                ip_and_ports_filtro2y3 
                 break
                 ;;
             [Nn])
                 nmap $ip -p- --open -T5 -v -n -O -oG allPort
-                #ip_and_ports_filtro2y3
                 
                 ip_address=$(cat "allPort" | grep -oP "\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" | sort -u)
                 port_list=$(cat "allPort" | grep -oP "\d{1,5}/open" | awk '{print $1}' FS=/ | xargs | tr ' ' ',')
@@ -150,7 +147,6 @@ opciones_nmap4() {
     echo -e "${greenColour} -O:${lightBlueColour} Intenta detectar el sistema operativo del objetivo."
     echo -e "${greenColour} --traceroute:${lightBlueColour} Muestra la ruta de los paquetes desde tu sistema hasta el objetivo."
 
-    # Agrega aquí el comando Nmap con las opciones
     echo -e "${redColour}\nEjemplo:${greenColour} nmap -F --open -T5 -v -n -oG allPorts -sC -sS -sV -oN targeted --min-rate 5000 -vvv -Pn -p- -O --traceroute <dirección_IP>"
 }
 
@@ -163,7 +159,6 @@ opcion2() {
 
         echo -e -n "\n   ${purpleColour}Introduce la dirección IP: ${grayColour} "
         read ip
-       #if ping -c 1 $ip > /dev/null 2>/dev/null ; then     filtrar sin mostrar el proceso de ping 
         if ping -c 1 $ip 2>/dev/null; then 
             echo -e "${yellowColour}   FELICIDADES, TIENES CONEXIÓN\n ${grayColour}"
             save_file2
@@ -178,22 +173,16 @@ opcion3() {
         echo -e -n "\n   ${grayColour}Introduce el nombre del ${purpleColour}archivo : ${grayColour} "
         read allPortsfile
 
-        # Directorio base para la búsqueda
         base_dir="/home/"
-        # Variable para controlar si se encontró el archivo
-        archivo_encontrado=false # predeterminado false
+        archivo_encontrado=false 
 
-        # Función recursiva para buscar en todas las carpetas y subcarpetas
         search_allPorts() {
             for file in "$1"/*; do
-                # Verificar si el elemento actual es un archivo y su nombre base coincide con allPortsfile
                 if [[ -f "$file" && "$(basename "$file")" == "$allPortsfile" ]]; then
-                    # Verifica si el elemento actual es un archivo (-f) y si su nombre base coincide con el nombre del archivo buscado.
                     echo -e "   ${purpleColour}Se encontró el archivo $allPortsfile en${purpleColour}: $file"
-                    archivo_encontrado=true  # Establecer en true si se encuentra el archivo
+                    archivo_encontrado=true  
 
                 elif [[ -d "$file" ]]; then
-                    # Si el elemento actual es un directorio, llama a la función de búsqueda recursiva para explorar sus contenidos.
                     search_allPorts "$file"
                 fi
             done
@@ -204,9 +193,8 @@ opcion3() {
         if [[ $archivo_encontrado == false ]]; then
             echo "   no existe"
         else
-            # Búsqueda en todas las carpetas y subcarpetas dentro de la carpeta base
             echo "   Búsqueda completa."
-            ip_and_ports_filtro2y3 # llamamos a la función ip_and_ports_filtro2y3
+            ip_and_ports_filtro2y3 
         fi       
     fi
 }
@@ -222,7 +210,6 @@ opcion4() {
     fi
 }
 
-# Función principal
 main() {
     root
     inicio
@@ -232,5 +219,4 @@ main() {
     opcion4
 
 }
-# Llama a la función principal
 main
