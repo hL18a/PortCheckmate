@@ -5,6 +5,8 @@ tanto para administradores de sistemas como para entusiastas de la seguridad que
 tareas de escaneo de red y puertos de manera eficiente.
 
 # Características clave
+PortCheckmate ha sido desarrollado y probado en sistemas Linux, y se espera que funcione en otros sistemas Unix compatibles. 
+
 Detección de Dispositivos en la Red: Con PortCheckmate, puedes buscar y listar los dispositivos conectados a tu red local.
 
 Escaneo de Puertos Rápido: Realiza un escaneo rápido de los puertos más comunes en un dispositivo o red.
