@@ -18,7 +18,7 @@ Escaneos Personalizables con Nmap: PortCheckmate utiliza Nmap bajo el capó, lo 
 Puedes ajustar las opciones de escaneo según tus necesidades específicas, como realizar un escaneo más completo o específico.
 
 
-#Requisitos:
+# Requisitos:
 
 Sistema Operativo: PortCheckmate ha sido desarrollado y probado en sistemas Linux, pero también es compatible con Termux, 
 un emulador de terminal para Android. Esto significa que puedes usarlo tanto en sistemas Linux como en dispositivos Android que ejecuten Termux.
