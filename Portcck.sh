@@ -40,7 +40,6 @@ function iniciolinux() {
         echo -e "\n  ${greenColour}[3]${yellowColour} Ver los puertos abiertos de tu archivo"
         echo -e "\n  ${greenColour}[4]${yellowColour} Nmap ${blueColour}personalizable${yellowColour} \t "
 
-
         echo -e -n "\n  ${grayColour}   Elige tu opción deseada: "
 
         read opcion_deseada
@@ -220,7 +219,6 @@ opcion4linux() {
         exit
     fi
 }
-
 
 function mainlinux() {
     echo -e "\t  Has elegido Linux."
