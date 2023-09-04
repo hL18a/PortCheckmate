@@ -5,7 +5,7 @@ tanto para administradores de sistemas como para entusiastas de la seguridad que
 tareas de escaneo de red y puertos de manera eficiente.
 
 # Características clave
-Detección de Dispositivos en la Red: PortCheckmate te permite buscar y listar los dispositivos conectados a tu red local. 
+<h3>Detección de Dispositivos en la Red</h3> PortCheckmate te permite buscar y listar los dispositivos conectados a tu red local. 
 Esto es útil para identificar qué dispositivos están en línea en tu red.
 
 Escaneo de Puertos Rápido: La herramienta realiza un escaneo rápido de los puertos más comunes en un dispositivo o en toda la red.
