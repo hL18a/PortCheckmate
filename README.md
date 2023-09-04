@@ -5,18 +5,21 @@ tanto para administradores de sistemas como para entusiastas de la seguridad que
 tareas de escaneo de red y puertos de manera eficiente.
 
 # Características clave
-Detección de Dispositivos en la Red PortCheckmate te permite buscar y listar los dispositivos conectados a tu red local. 
+**Detección de Dispositivos en la Red:** PortCheckmate te permite buscar y listar los dispositivos conectados a tu red local. 
 Esto es útil para identificar qué dispositivos están en línea en tu red.
 
-Escaneo de Puertos Rápido: La herramienta realiza un escaneo rápido de los puertos más comunes en un dispositivo o en toda la red.
+**Escaneo de Puertos Rápido:** La herramienta realiza un escaneo rápido de los puertos más comunes en un dispositivo o en toda la red.
 Esto facilita la identificación de posibles servicios o vulnerabilidades expuestas en los dispositivos.
 
-Visualización de Puertos Abiertos: Puedes ver fácilmente los puertos abiertos en un archivo de resultados previamente guardado. 
+**Visualización de Puertos Abiertos:** Puedes ver fácilmente los puertos abiertos en un archivo de resultados previamente guardado. 
 Esto te permite realizar un seguimiento de los cambios en la disponibilidad de puertos con el tiempo.
 
-Escaneos Personalizables con Nmap: PortCheckmate utiliza Nmap bajo el capó, lo que te permite ejecutar escaneos personalizables.
+**Escaneos Personalizables con Nmap:** PortCheckmate utiliza Nmap bajo el capó, lo que te permite ejecutar escaneos personalizables.
 Puedes ajustar las opciones de escaneo según tus necesidades específicas, como realizar un escaneo más completo o específico.
 
+> https://github.com/hL18a/PortCheckmate.git
+> cd PortCheckmate 
+> ./Portcck.sh
 
 # Requisitos:
 
