@@ -30,9 +30,8 @@ Para utilizar PortCheckmate, asegúrate de cumplir con los siguientes requisitos
  que puedes usarlo tanto en sistemas Linux como en dispositivos Android que ejecuten Termux.
 
 - **Nmap:** Debes tener Nmap instalado en tu sistema. Nmap es una herramienta de escaneo de red
- ampliamente utilizada que PortCheckmate aprovecha para realizar escaneos de puertos.
-`sudo apt-get update`
-`sudo apt-get install nmap`
+ ampliamente utilizada que PortCheckmate aprovecha para realizar escaneos de puertos. ``sudo apt-get install nmap``
+
 
 - **Permisos de Superusuario:** Para algunas operaciones de escaneo, es posible que necesites
   permisos de superusuario. En sistemas Linux, puedes usar el comando `sudo su` para obtener estos privilegios.
