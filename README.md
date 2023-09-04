@@ -17,10 +17,6 @@ Esto te permite realizar un seguimiento de los cambios en la disponibilidad de p
 **Escaneos Personalizables con Nmap:** PortCheckmate utiliza Nmap bajo el capó, lo que te permite ejecutar escaneos personalizables.
 Puedes ajustar las opciones de escaneo según tus necesidades específicas, como realizar un escaneo más completo o específico.
 
-> https://github.com/hL18a/PortCheckmate.git
-> cd PortCheckmate 
-> ./Portcck.sh
-
 # Requisitos:
 
 Sistema Operativo: PortCheckmate ha sido desarrollado y probado en sistemas Linux, pero también es compatible con Termux, 
