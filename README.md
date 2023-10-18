@@ -40,11 +40,12 @@ Para utilizar PortCheckmate, asegúrate de cumplir con los siguientes requisitos
 
 Sigue estos pasos para instalar PortCheckmate en tu sistema:
 
-   ```bash
-   git clone https://github.com/hL18a/PortCheckmate.git
-   cd PortCheckmate
-   chmod +x Portcck.sh
-   ./Portcck.sh
+    ```bash
+    git clone https://github.com/hL18a/PortCheckmate.git
+    cd PortCheckmate
+    chmod +x Portcck.sh
+    ./Portcck.sh
+
    
 # Responsabilidad y Uso Ético
 El autor de este software no asume ninguna responsabilidad por el uso indebido del 
